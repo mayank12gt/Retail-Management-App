@@ -1,0 +1,66 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ShopManager" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/blue1</item>
+        <item name="android:statusBarColor">@color/black</item>
+
+
+    </style>
+
+    <style name="Theme.ShopManager" parent="Base.Theme.ShopManager" />
+
+    <style name="fab_square" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">2dp</item>
+    </style>
+
+    <style name="SearchBar" parent="Widget.AppCompat.SearchView">
+        <item name="android:textAppearance">@style/CustomFontTextAppearance2</item>
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+
+    </style>
+
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="Widget.TopAppBar"
+        parent="Widget.Material3.Toolbar">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">22sp</item>
+
+    </style>
+
+    <style name="CustomFontTextAppearance3" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+
+
+
+    <style name="CustomFontTextAppearance2" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+
+    </style>
+    <style name="CustomFontTextAppearance1" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+
+    </style>
+
+
+</resources>

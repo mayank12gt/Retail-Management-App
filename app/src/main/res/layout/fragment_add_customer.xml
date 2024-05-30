@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@id/add_customer_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/item_images"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="6dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="6dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_images_btn"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:backgroundTint="@color/blue1"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@id/item_images"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:shapeAppearanceOverlay="@style/fab_square"
+                app:srcCompat="@drawable/add_images_icon"
+                app:tint="@color/white" />-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_name_text_field"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="220dp"
+                android:layout_marginEnd="6dp"
+                android:hint="Name"
+                android:textColorHint="@color/grey_font"
+                app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/CustomFontTextAppearance3"
+                    android:textSize="16sp"
+
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_contact_num_text_field"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:hint="Contact no."
+                android:textColorHint="@color/grey_font"
+                app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_name_text_field">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_contact_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/CustomFontTextAppearance3"
+                    android:textSize="16sp"
+                    android:inputType="phone"
+
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_email_text_field"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:hint="Email"
+                android:textColorHint="@color/grey_font"
+                app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_contact_num_text_field">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/CustomFontTextAppearance3"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_customer_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="3dp"
+
+
+        android:includeFontPadding="false"
+        android:text="Add Customer"
+        app:icon="@drawable/add_items_icon"
+        android:textAllCaps="false"
+        android:textAppearance="@style/CustomFontTextAppearance2"
+        android:textColor="@color/white"
+
+
+
+        app:iconGravity="textStart"
+
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

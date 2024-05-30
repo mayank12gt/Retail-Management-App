@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="6dp"
+
+
+    android:maxHeight="300dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/blue1"
+                android:id="@+id/invoice_info_layout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/customer_name"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+
+            android:layout_marginEnd="4dp"
+
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Mayank Gupta"/>
+
+                <TextView
+                    android:id="@+id/invoice_grand_total"
+                    style="@style/CustomFontTextAppearance2"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/customer_name"
+                    android:layout_alignStart="@id/customer_name"
+                    android:layout_marginTop="0dp"
+
+                    android:includeFontPadding="false"
+
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+
+                    tools:text="$250.00" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/invoice_date"
+                   android:layout_alignStart="@id/invoice_date"
+                    android:layout_marginEnd="4dp"
+
+                    android:clickable="false"
+                    android:id="@+id/paid_status_chip"
+
+
+                    android:includeFontPadding="false"
+                    android:textAppearance="@style/CustomFontTextAppearance3"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/green_1"
+                    app:chipCornerRadius="6dp"
+                    app:chipEndPadding="4dp"
+                    app:chipStartPadding="4dp"
+                    app:chipStrokeColor="@color/green_1"
+                    app:chipStrokeWidth="1dp"
+                    tools:text="Unpaid" />
+
+
+                <TextView
+                    android:id="@+id/invoice_num_items"
+                    style="@style/CustomFontTextAppearance2"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/customer_name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="6dp"
+
+                    android:layout_marginStart="6dp"
+
+                    android:includeFontPadding="false"
+
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+
+                    tools:text="10 items" />
+
+                <TextView
+                    android:id="@+id/invoice_date"
+                    style="@style/CustomFontTextAppearance2"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/invoice_grand_total"
+                    android:layout_alignStart="@id/invoice_grand_total"
+                    android:layout_marginTop="2dp"
+
+
+                    android:includeFontPadding="false"
+
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+
+                    tools:text="23 Oct 2023- 2:34 PM" />
+            </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/invoice_itemslist_item"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/invoice_items_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/invoice_info_layout"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

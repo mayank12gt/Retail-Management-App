@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Shop Manager"
+            app:titleCentered="true"
+
+
+
+            android:background="@color/white"
+            app:titleTextColor="@color/blue1"
+            app:titleTextAppearance="@style/Widget.TopAppBar"
+
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/logIn_tv"
+        android:text="Log In to your account"
+        android:layout_marginTop="80dp"
+        style="@style/CustomFontTextAppearance2"
+
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        />
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailtextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logIn_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+
+
+        app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomFontTextAppearance2"
+            android:id="@+id/email_edit_text"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:layout_constraintStart_toStartOf="@id/emailtextField"
+        app:layout_constraintTop_toBottomOf="@id/emailtextField"
+        app:layout_constraintEnd_toEndOf="@id/emailtextField"
+        android:layout_width="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+
+
+        app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+        android:hint="Password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomFontTextAppearance2"
+            android:id="@+id/password_edit_text"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/logIn_btn"
+        app:layout_constraintTop_toBottomOf="@id/password_field"
+        app:layout_constraintStart_toStartOf="@id/password_field"
+        app:layout_constraintEnd_toEndOf="@id/password_field"
+        android:layout_marginTop="30dp"
+        android:text="Log In"
+        android:textSize="25sp"
+        android:padding="8dp"
+        app:cornerRadius="8dp"
+        android:textAppearance="@style/CustomFontTextAppearance2"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/logIn_btn"
+        app:layout_constraintStart_toStartOf="@id/logIn_btn"
+        app:layout_constraintEnd_toEndOf="@id/logIn_btn"
+        android:id="@+id/signUp_tv"
+        android:text="Create an account"
+
+        android:layout_marginTop="10dp"
+
+        style="@style/CustomFontTextAppearance2"
+        android:textSize="20sp"
+        android:textColor="@color/blue1"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

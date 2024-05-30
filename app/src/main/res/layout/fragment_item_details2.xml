@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@id/add_more_items_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+         >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/item_images"
+                android:layout_width="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_height="250dp"
+                app:riv_corner_radius="2dp"
+                android:layout_marginTop="0dp"
+
+                android:scaleType="center"
+                android:src="@drawable/default_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_info_card_layout"
+                android:backgroundTint="#F1F1F1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"
+
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cardCornerRadius="12dp"
+
+                app:layout_constraintTop_toBottomOf="@id/item_images">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp">
+
+
+                <TextView
+                android:id="@+id/item_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginTop="6dp"
+                android:lineHeight="32dp"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/blue3"
+                android:textColorHint="@color/grey_font"
+                android:textSize="28sp"
+
+
+                app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nivea Face cream 60 gm small pack" />
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider1"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:dividerColor="@color/grey_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_name" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/item_available_stock_heading"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="Available Stock"
+
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/grey_font"
+                android:textSize="16sp"
+                app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+
+
+                app:layout_constraintEnd_toStartOf="@+id/item_low_stock_alert_heading"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+            <TextView
+                android:id="@+id/item_available_stock"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/black_1"
+                android:textColorHint="@color/grey_font"
+                android:textSize="20sp"
+
+
+                app:boxStrokeColor="@color/mtrl_textinput_default_box_stroke_color"
+                app:layout_constraintEnd_toEndOf="@id/item_available_stock_heading"
+                app:layout_constraintStart_toStartOf="@id/item_available_stock_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_available_stock_heading"
+                tools:text="50 items" />
+
+
+            <TextView
+                android:id="@+id/item_low_stock_alert_heading"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+                android:gravity="center_horizontal"
+                android:text="Low Stock Alert "
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/grey_font"
+
+
+                android:textSize="16sp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/item_available_stock_heading"
+                app:layout_constraintTop_toTopOf="@id/item_available_stock_heading" />
+
+            <TextView
+                android:id="@+id/item_low_stock_alert"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/black_1"
+
+                android:textSize="20sp"
+
+
+
+                app:layout_constraintEnd_toEndOf="@id/item_low_stock_alert_heading"
+                app:layout_constraintStart_toStartOf="@id/item_low_stock_alert_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_low_stock_alert_heading"
+                tools:text="10 items " />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:dividerColor="@color/grey_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_available_stock" />
+
+
+            <TextView
+                android:id="@+id/item_purchase_price_heading"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="Purchase Price"
+
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/grey_font"
+                android:textSize="16sp"
+
+
+                app:layout_constraintEnd_toStartOf="@+id/item_total_cost_heading"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <TextView
+                android:id="@+id/item_purchase_price"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/black_1"
+                android:textColorHint="@color/grey_font"
+                android:textSize="20sp"
+
+
+
+                app:layout_constraintEnd_toEndOf="@id/item_purchase_price_heading"
+                app:layout_constraintStart_toStartOf="@id/item_purchase_price_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_purchase_price_heading"
+                tools:text="$15.00" />
+
+            <TextView
+                android:id="@+id/item_total_cost_heading"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="Total Cost"
+
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/grey_font"
+                android:textSize="16sp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/item_purchase_price_heading"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <TextView
+                android:id="@+id/item_total_cost"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/black_1"
+
+                android:textSize="20sp"
+
+
+
+                app:layout_constraintEnd_toEndOf="@id/item_total_cost_heading"
+                app:layout_constraintStart_toStartOf="@id/item_total_cost_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_total_cost_heading"
+                tools:text="$750.00" />
+
+
+
+            <TextView
+                android:id="@+id/item_selling_price_heading"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text="Selling Price"
+
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/grey_font"
+                android:textSize="16sp"
+
+
+
+                app:layout_constraintEnd_toStartOf="@+id/item_total_value_heading"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_purchase_price" />
+
+            <TextView
+                android:id="@+id/item_selling_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/black_1"
+
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/item_selling_price_heading"
+                app:layout_constraintStart_toStartOf="@id/item_selling_price_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_selling_price_heading"
+                tools:text="$20.00" />
+
+            <TextView
+                android:id="@+id/item_total_value_heading"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text="Total Value"
+
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/grey_font"
+                android:textSize="16sp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/item_purchase_price_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_total_cost" />
+
+            <TextView
+                android:id="@+id/item_total_value"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/black_1"
+
+                android:textSize="20sp"
+
+
+
+                app:layout_constraintEnd_toEndOf="@id/item_total_value_heading"
+                app:layout_constraintStart_toStartOf="@id/item_total_value_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_total_value_heading"
+                tools:text="$1000.00" />
+
+            <!--<TextView
+                android:id="@+id/item_profit_margin_heading"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+
+                android:gravity="center_horizontal"
+                android:text="Profit Margin(%)"
+
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/grey_font"
+                android:textSize="16sp"
+
+
+
+                app:layout_constraintEnd_toEndOf="@+id/item_total_value_heading"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/item_selling_price_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_selling_price" />
+            <TextView
+                android:id="@+id/item_profit_margin"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+
+                android:gravity="center_horizontal"
+                tools:text="12%"
+
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/blue3"
+                android:textSize="20sp"
+
+
+
+                app:layout_constraintEnd_toEndOf="@+id/item_profit_margin_heading"
+
+                app:layout_constraintStart_toStartOf="@id/item_profit_margin_heading"
+                app:layout_constraintTop_toBottomOf="@id/item_profit_margin_heading" />
+-->
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+
+                app:dividerColor="@color/grey_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_total_value" />
+
+
+            <TextView
+                android:id="@+id/item_desc_heading"
+        android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+
+                android:textColor="@color/grey_font"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider3"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/item_desc"
+
+android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+               android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+                android:textColor="@color/black_1"
+                android:textColorHint="@color/grey_font"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_desc_heading"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_more_items_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="3dp"
+
+
+        android:includeFontPadding="false"
+        android:text="Add More Items"
+        android:textAllCaps="false"
+        android:textAppearance="@style/CustomFontTextAppearance2"
+        android:textColor="@color/white"
+        app:icon="@drawable/add_images_icon"
+
+
+        app:iconGravity="textStart"
+
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

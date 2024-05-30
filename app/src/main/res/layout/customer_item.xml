@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    app:cardElevation="4dp"
+    app:cardCornerRadius="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="@color/white"
+
+
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+        android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp">
+
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/customer_Image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="2dp"
+
+            android:src="@drawable/user_profile_image"
+
+            android:scaleType="centerCrop"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:riv_corner_radius="2dp" />
+
+
+        <TextView
+            android:id="@+id/customer_name"
+            style="@style/CustomFontTextAppearance2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+
+            android:layout_marginEnd="4dp"
+
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+
+            android:maxLines="2"
+            android:textColor="#4C4B4B"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/customer_Image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/customer_Image"
+            tools:text="Mayank Gupta" />
+
+
+
+        <TextView
+            android:id="@+id/customer_contact_num"
+            style="@style/CustomFontTextAppearance3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+
+            android:maxLines="2"
+            android:textColor="#757373"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/customer_name"
+            app:layout_constraintTop_toBottomOf="@id/customer_name"
+            tools:text="7078424885" />
+
+    <TextView
+        android:id="@+id/customer_email"
+        style="@style/CustomFontTextAppearance3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+
+        android:maxLines="2"
+        android:textColor="#757373"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/customer_name"
+        app:layout_constraintTop_toBottomOf="@id/customer_contact_num"
+        tools:text="mayank.gt15@gmail.com" />
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

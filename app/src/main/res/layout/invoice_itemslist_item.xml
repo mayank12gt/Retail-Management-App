@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="2dp">
+
+
+    <TextView
+        android:id="@+id/item_no"
+        style="@style/CustomFontTextAppearance2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="4dp"
+        android:gravity="start"
+
+
+        android:includeFontPadding="false"
+
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_name"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/item_name"
+        style="@style/CustomFontTextAppearance2"
+
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+
+
+        android:maxWidth="100dp"
+
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_qty"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_no"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Parachute Hair OIl afaafdafafaffafafdsafafdfasdfasdfasdfaddadafdsddafdsfdfdasfdas " />
+
+    <TextView
+        android:id="@+id/item_qty"
+        style="@style/CustomFontTextAppearance2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+
+
+        android:includeFontPadding="false"
+
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_total"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="x5" />
+
+    <TextView
+        android:id="@+id/item_total"
+        style="@style/CustomFontTextAppearance2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:gravity="end"
+
+
+        android:includeFontPadding="false"
+
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_qty"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$12.00" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

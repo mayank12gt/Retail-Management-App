@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/invoices_search_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/searh_bar_bg"
+        android:theme="@style/SearchBar"
+        app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toBottomOf="@+id/filter_invoices_btn"
+        app:layout_constraintEnd_toStartOf="@id/filter_invoices_btn"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/filter_invoices_btn"
+        app:queryHint="Search Items"
+        app:searchIcon="@drawable/search_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invoices_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        tools:listitem="@layout/stock_item_layout"
+
+
+        app:layout_constraintBottom_toTopOf="@id/add_invoice_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/invoices_search_view" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_invoice_btn"
+        android:layout_width="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+
+
+
+
+        android:text="Create new Invoice"
+        android:textAllCaps="false"
+        app:icon="@drawable/add_items_icon"
+        app:iconGravity="textStart"
+        android:includeFontPadding="false"
+        android:textAppearance="@style/CustomFontTextAppearance2"
+
+
+
+        android:textColor="@color/white"
+
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/filter_invoices_btn"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:backgroundTint="@color/blue1"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:tint="@color/white"
+        app:srcCompat="@drawable/filter_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loading_invoices"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone"
+        app:indicatorColor="@color/blue1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:trackColor="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

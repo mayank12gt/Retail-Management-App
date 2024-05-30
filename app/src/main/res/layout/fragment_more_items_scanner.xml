@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".inventoryfragments.ScannerFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:background="@color/blue1"
+        android:id="@+id/done_btn"
+        android:textAllCaps="false"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="@style/CustomFontTextAppearance2"/>
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoFocusButtonColor="@color/white"
+        app:autoFocusButtonPosition="bottomStart"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@color/white"
+        app:flashButtonPosition="bottomEnd"
+        app:flashButtonVisible="true"
+        app:frameColor="@color/white"
+        app:frameCornersRadius="10dp"
+        app:frameThickness="3dp"
+        app:frameAspectRatioWidth="3.1"
+        android:id="@+id/barcode_scanner"/>
+
+</FrameLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/invoice_info_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/customer_name"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+
+            android:layout_marginEnd="4dp"
+
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Mayank Gupta" />
+
+        <TextView
+            android:id="@+id/customer_contact_num"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/customer_name"
+            android:layout_alignStart="@id/customer_name"
+            android:layout_marginTop="0dp"
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            tools:text="7078424885" />
+
+
+        <TextView
+            android:id="@+id/invoice_grand_total"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invoice_num_items"
+
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            tools:text="$250.00" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invoice_grand_total"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="4dp"
+
+            android:clickable="false"
+            android:id="@+id/paid_status_chip"
+
+
+            android:includeFontPadding="false"
+            android:textAppearance="@style/CustomFontTextAppearance3"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/green_1"
+            app:chipCornerRadius="6dp"
+            app:chipEndPadding="4dp"
+            app:chipStartPadding="4dp"
+            app:chipStrokeColor="@color/green_1"
+            app:chipStrokeWidth="1dp"
+            tools:text="Unpaid" />
+
+
+
+
+        <TextView
+            android:id="@+id/invoice_num_items"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@id/customer_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+
+            android:layout_marginEnd="6dp"
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            tools:text="10 items" />
+
+        <TextView
+            android:id="@+id/invoice_date"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/customer_contact_num"
+            android:layout_alignStart="@id/customer_contact_num"
+            android:layout_marginTop="2dp"
+
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            tools:text="23 Oct 2023- 2:34 PM" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="4dp"
+           android:includeFontPadding="false"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+
+
+
+            android:id="@+id/paid_status_btn"
+            android:text="Mark as Paid"
+            android:textAppearance="@style/CustomFontTextAppearance2"
+            android:textSize="14sp"
+
+
+           android:backgroundTint="@color/white"
+            android:textColor="#1EAB3D"
+            android:layout_below="@id/invoice_date"
+            android:textAllCaps="false"
+           />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/invoice_info_layout">
+
+
+        <TextView
+            android:id="@+id/item_no"
+            style="@style/CustomFontTextAppearance2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:text="S no."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/item_name"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_name"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+
+
+            android:maxWidth="200dp"
+
+            android:maxLines="1"
+            android:text="Item Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/item_qty"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_no"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_qty"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:text="Quantity"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/item_total"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_total"
+            style="@style/CustomFontTextAppearance2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:gravity="end"
+
+
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_qty"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invoice_items_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+
+        tools:listitem="@layout/invoice_itemslist_item" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pdf_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/invoice_items_rv">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pdf_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="6dp"
+                android:src="@drawable/pdf_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="Invoice PDF"
+                android:textAppearance="@style/CustomFontTextAppearance2"
+
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/pdf_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/pdf_icon"
+                app:layout_constraintTop_toTopOf="@id/pdf_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/upi_qr_heading"
+        style="@style/CustomFontTextAppearance3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+       app:layout_constraintTop_toBottomOf="@id/pdf_card_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Scan to pay"
+
+
+        android:includeFontPadding="false"
+
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+
+        />
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/upi_qr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upi_qr_heading" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+
+

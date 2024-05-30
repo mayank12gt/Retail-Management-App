@@ -1,0 +1,33 @@
+<!-- res/layout/spinner_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@color/card_bg"
+    android:layout_marginBottom="4dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:id="@+id/add_category_btn"
+        android:src="@drawable/add_images_icon"
+        android:layout_gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/spinner_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        style="@style/CustomFontTextAppearance3"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+
+        tools:text="Add Category"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
